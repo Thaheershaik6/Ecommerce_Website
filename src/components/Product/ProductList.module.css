@@ -1,0 +1,10 @@
+.product_type{
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: -2rem;
+}
+
+.product_view{
+    display:none
+}

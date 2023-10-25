@@ -1,0 +1,9 @@
+.footer{
+    width: auto;;
+    height: 8rem;
+    background-color: rgb(50, 80, 111);
+    color: aliceblue;
+    font-size: 3rem;
+    padding-left: 0rem;
+    padding-top: 2rem;
+}

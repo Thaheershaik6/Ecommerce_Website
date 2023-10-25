@@ -1,0 +1,10 @@
+.header{
+    width: auto;
+    height: 10rem;
+    background-color: blueviolet;
+    color: aliceblue;
+    text-align: center;
+    font-size: 6rem;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+}
