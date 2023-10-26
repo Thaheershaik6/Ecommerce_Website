@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Navbar, Container, Nav } from "react-bootstrap";
-import Cart from "./Cart";
+import Cart from "./Cart/Cart";
 import Header from "./Header/Header";
 
 const NavBar = () => {

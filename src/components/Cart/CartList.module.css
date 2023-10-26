@@ -1,0 +1,13 @@
+.cart_view{
+background-color: aliceblue;
+border-color: brown !important;
+margin-top: 3rem !important;
+height: 60% !important;
+    width: 40% !important;
+}
+
+.cart_view p{
+    font-size: 40px;
+    font-weight: bold;
+    font-family:serif;
+}
