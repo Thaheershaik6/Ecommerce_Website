@@ -1,12 +1,11 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import { Button, Row, Col } from "react-bootstrap";
 import classes from "./CartItem.module.css";
-import { Row, Col } from "react-bootstrap";
 
 const CartItems = (props) => {
   const removeItemHandler = () => {};
 
-  // let quantity = props.quantity;
+  let quantity = props.quantity;
   return (
     <div className="fs-5 mb-4">
       <Row>
@@ -21,16 +20,20 @@ const CartItems = (props) => {
           <span className={classes.item_title}>{props.title}</span>
         </Col>
         <Col xs={3}>
-          <span className={classes.item}>{props.price}</span>
-          <span className={classes.item_qnty}>{props.quantity} </span>
-          {/* <input className={classes.item_input} defaultValue={quantity}/> */}
+          <span className={classes.item_price}>${props.price}</span>
         </Col>
         <Col xs={3}>
-          <Button onClick={removeItemHandler} className={classes.rmBtn}>
+          <input className={classes.item_input} defaultValue={quantity} />
+          <Button
+            onClick={removeItemHandler}
+            className={classes.rmBtn}
+            variant="danger"
+          >
             Remove
           </Button>
         </Col>
       </Row>
+      <hr />
     </div>
   );
 };

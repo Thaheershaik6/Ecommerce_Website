@@ -8,18 +8,16 @@
     width: 2rem;
     height: 4rem;
 }
-.item_qnty{
-    padding-left: 3rem;
-}
 
 .item_input{
     background-color: aliceblue;
     width: 25px;
     height: 25px;
+    color: black;
+    border-color:rgb(54, 195, 195);
 }
 .rmBtn{
-   margin-left: 2rem;
-   margin-right: 0%;
+   margin-top: -4rem;
    background-color: rgb(203, 27, 27);
    margin-left: 4rem;
 }

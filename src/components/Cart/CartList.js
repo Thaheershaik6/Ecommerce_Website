@@ -1,7 +1,8 @@
 import React from "react";
 import CartItems from "./CartItem";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Button } from "react-bootstrap";
 import classes from "./CartList.module.css";
+import Modal from "../UI/Modal";
 
 const cartElements = [
   {
@@ -27,19 +28,25 @@ const cartElements = [
 const CartList = (props) => {
   return (
     <>
-      {/* <Modal> */}
-      <Row className={classes.cart_view}>
-        <p>Cart</p>
-        <Container>
-          <Row>
+      <Modal>
+        <Row>
+          <p>Cart</p>
+          <div className="fw-bold fs-5 mb-4">
+            <span className="px-5">
+              <u>Item</u>
+            </span>
+            <span className=" px-5 mx-3">
+              <u>Price</u>
+            </span>
+            <span className="px-1">
+              <u>Quantity</u>
+            </span>
+          </div>
+          <Container className={classes.cart_view}>
             <Col xs={8}>
-              <div className="fw-bold fs-5 d-flex mb-4">
-                <span className="px-5">Item</span>
-                <span className=" px-4">Price</span>
-                <span>Quantity</span>
-              </div>
               {cartElements.map((item) => (
                 <CartItems
+                  key={item.title}
                   img={item.imageUrl}
                   title={item.title}
                   price={item.price}
@@ -47,10 +54,13 @@ const CartList = (props) => {
                 />
               ))}
             </Col>
-          </Row>
-        </Container>
-      </Row>
-      {/* </Modal> */}
+          </Container>
+          <h3 className={classes.tmt}>Total amount $</h3>
+          <Col xs={12}>
+            <Button className={classes.btn}>Purchase</Button>
+          </Col>
+        </Row>
+      </Modal>
     </>
   );
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 import "./App.css";
 import NavBar from "./components/NavBar";
@@ -8,14 +8,20 @@ import { Button } from "react-bootstrap";
 import CartList from "./components/Cart/CartList";
 
 const App = () => {
+
+  const [cartOpen, setCartOpen] = useState(false);
+
+    const cartOpenHandler = () =>{
+        setCartOpen(true);
+    }
   return (
     <div className="App">
-      <NavBar></NavBar>
+      <NavBar onClick={cartOpenHandler} ></NavBar>
       <ProductList />
-      <Button className="text-info cartBtn" variant="secondary">
+      {cartOpen && <CartList/>}
+      <Button className="text-info cartBtn" variant="secondary" onClick={cartOpenHandler}>
         See The Cart
       </Button>
-      <CartList />
       <Footer />
     </div>
   );

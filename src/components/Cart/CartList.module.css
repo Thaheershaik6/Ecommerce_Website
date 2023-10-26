@@ -1,13 +1,23 @@
-.cart_view{
-background-color: aliceblue;
-border-color: brown !important;
-margin-top: 3rem !important;
-height: 60% !important;
-    width: 40% !important;
+.cart_view {
+  display: flex;
+  max-height: 25rem;
+  overflow: scroll;
 }
 
-.cart_view p{
-    font-size: 40px;
-    font-weight: bold;
-    font-family:serif;
+p {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: serif;
+  text-align: center;
+}
+
+.tmt{
+    text-align: center;
+}
+
+.btn {
+  width: 7rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+  margin-left: 15rem;
 }

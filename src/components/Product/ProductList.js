@@ -51,7 +51,7 @@ const ProductList = (props) => {
         <Row className="d-flex justify-content-center align-item-center">
           {productsArr.map((product) => {
             return product.category === "music" ? (
-              <Col xs={3} className="m-5">
+              <Col xs={3} className="m-5" key={product.title}>
                 <Product
                   title={product.title}
                   price={product.price}
@@ -67,7 +67,7 @@ const ProductList = (props) => {
         <Row className="d-flex justify-content-center align-item-center">
           {productsArr.map((product) => {
             return product.category === "merchandise" ? (
-              <Col xs={3} className="m-5">
+              <Col xs={3} className="m-5" key={product.title}>
                 <Product
                   title={product.title}
                   price={product.price}

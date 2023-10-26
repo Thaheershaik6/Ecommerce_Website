@@ -1,16 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "react-bootstrap";
-import CartList from "./CartList";
+// import CartList from "./CartList";
 
 const Cart = (props) => {
-    const [cartOpen, setCartOpen] = useState(false);
-
-    const cartOpenHandler = () =>{
-        setCartOpen(true);
-    }
+    
     return<>
-    <Button variant="outline-info" onClick={cartOpenHandler}>Cart {0}</Button>
-    {cartOpen && <CartList />}
+    <Button variant="outline-info" onClick={props.onClick}>Cart {0}</Button>
+    {/* {cartOpen && <CartList />} */}
     </>
 }
 

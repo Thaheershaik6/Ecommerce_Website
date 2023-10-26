@@ -4,7 +4,7 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import Cart from "./Cart/Cart";
 import Header from "./Header/Header";
 
-const NavBar = () => {
+const NavBar = (props) => {
   return (
     <>
       <Navbar
@@ -24,7 +24,7 @@ const NavBar = () => {
               ABOUT
             </Navbar.Brand>
           </Nav>
-          <Cart />
+          <Cart onClick={props.onClick} />
         </Container>
       </Navbar>
       <Header/>
