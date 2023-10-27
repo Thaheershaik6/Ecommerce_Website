@@ -6,12 +6,13 @@ const CartItems = (props) => {
   const removeItemHandler = () => {};
 
   let quantity = props.quantity;
+  let img = props.imageUrl;
   return (
     <div className="fs-5 mb-4">
       <Row>
         <Col xs={3}>
           <img
-            src={props.img}
+            src={img}
             alt="cart_added_items"
             className={classes.item_img}
           />

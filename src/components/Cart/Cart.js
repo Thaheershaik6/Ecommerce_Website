@@ -1,12 +1,15 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Button } from "react-bootstrap";
-// import CartList from "./CartList";
+import CartContext from "../../store/CartContext";
 
 const Cart = (props) => {
+
+    const cartCtx = useContext(CartContext);
+
+    const itemsAdded = cartCtx.items.length;
     
     return<>
-    <Button variant="outline-info" onClick={props.onClick}>Cart {0}</Button>
-    {/* {cartOpen && <CartList />} */}
+    <Button variant="outline-info" onClick={props.onClick}>Cart {itemsAdded}</Button>
     </>
 }
 

@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import ProductList from "./components/Product/ProductList";
 import { Button } from "react-bootstrap";
 import CartList from "./components/Cart/CartList";
+import CartProvider from "./store/CartProvider";
 
 const App = () => {
 
@@ -14,15 +15,20 @@ const App = () => {
     const cartOpenHandler = () =>{
         setCartOpen(true);
     }
+    const cartCloseHandler = () => {
+      setCartOpen(false);
+    }
   return (
     <div className="App">
+    <CartProvider >
       <NavBar onClick={cartOpenHandler} ></NavBar>
       <ProductList />
-      {cartOpen && <CartList/>}
+      {cartOpen && <CartList onClose={cartCloseHandler}/>}
       <Button className="text-info cartBtn" variant="secondary" onClick={cartOpenHandler}>
         See The Cart
       </Button>
       <Footer />
+    </CartProvider>
     </div>
   );
 };
