@@ -1,10 +1,9 @@
 import React from "react";
 
 import { Navbar, Container, Nav } from "react-bootstrap";
-import Cart from "./Cart/Cart";
 import Header from "./Header/Header";
 
-const NavBar = (props) => {
+const NavBarWithoutCart = () => {
   return (
     <>
       <Navbar
@@ -17,14 +16,13 @@ const NavBar = (props) => {
             <Navbar.Brand href="/home" className="px-4">
               HOME
             </Navbar.Brand>
-            <Navbar.Brand href="/store" className="px-4">
+            <Navbar.Brand href="#store" className="px-4">
               STORE
             </Navbar.Brand>
             <Navbar.Brand href="/about" className="px-4">
               ABOUT
             </Navbar.Brand>
           </Nav>
-          <Cart onClick={props.onClick} />
         </Container>
       </Navbar>
       <Header/>
@@ -32,4 +30,4 @@ const NavBar = (props) => {
   );
 };
 
-export default NavBar;
+export default NavBarWithoutCart;

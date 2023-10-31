@@ -1,34 +1,38 @@
-import React, {useState} from "react";
+import React from "react";
+import {
+  RouterProvider,
+  createBrowserRouter,
+  // createRoutesFromElements,
+  // Route,
+} from "react-router-dom";
 
 import "./App.css";
-import NavBar from "./components/NavBar";
-import Footer from "./components/Footer/Footer";
-import ProductList from "./components/Product/ProductList";
-import { Button } from "react-bootstrap";
-import CartList from "./components/Cart/CartList";
 import CartProvider from "./store/CartProvider";
+import AboutPage from "./pages/AboutPage";
+import Home from "./pages/Home";
+
+// const routeDefination = createRoutesFromElements(
+//   <Route>
+//     <Route path="/" element={<AboutPage />} />
+//     <Route path="/about" element={<AboutPage />} />
+//   </Route>
+// );
+// const router = createBrowserRouter(routeDefination);
+
+const router = createBrowserRouter([
+  // {path: '/', element: ''},
+  { path: "/about", element: <AboutPage /> },
+  {path: '/home', element: <Home/>}
+]);
 
 const App = () => {
 
-  const [cartOpen, setCartOpen] = useState(false);
-
-    const cartOpenHandler = () =>{
-        setCartOpen(true);
-    }
-    const cartCloseHandler = () => {
-      setCartOpen(false);
-    }
   return (
     <div className="App">
-    <CartProvider >
-      <NavBar onClick={cartOpenHandler} ></NavBar>
-      <ProductList />
-      {cartOpen && <CartList onClose={cartCloseHandler}/>}
-      <Button className="text-info cartBtn" variant="secondary" onClick={cartOpenHandler}>
-        See The Cart
-      </Button>
-      <Footer />
-    </CartProvider>
+      
+      <CartProvider>
+        <RouterProvider router={router} />
+      </CartProvider>
     </div>
   );
 };
