@@ -9,7 +9,7 @@ const Cart = (props) => {
     const itemsAdded = cartCtx.items.length;
     
     return<>
-    <Button variant="outline-info" onClick={props.onClick}>Cart {itemsAdded}</Button>
+    <Button variant="outline-info" style={{width: '7rem', marginTop: 'auto', backgroundColor: 'black', borderRadius: '15px' }} onClick={props.onClick}>Cart {itemsAdded}</Button>
     </>
 }
 

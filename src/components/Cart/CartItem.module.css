@@ -17,7 +17,8 @@
     border-color:rgb(54, 195, 195);
 }
 .rmBtn{
-   margin-top: -4rem;
-   background-color: rgb(203, 27, 27);
-   margin-left: 4rem;
+   margin-top: -4rem !important;
+   background-color: rgb(203, 27, 27) !important;
+   margin-left: 4rem !important;
+   width: 10rem;
 }

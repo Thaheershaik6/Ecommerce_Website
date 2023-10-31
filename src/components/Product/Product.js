@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 // import CartContext from "../../store/CartContext";
 
 const Product = (props) => {
@@ -24,7 +24,7 @@ const Product = (props) => {
         <Card.Body>
           <Card.Text>
            <span style={{fontSize: '20px'}}> ${props.price} </span>
-            <Button type="submit" variant="primary" style={{marginLeft: '5rem'}} onClick={props.addToCart}>ADD TO CART</Button>
+            <button type="submit" variant="primary" style={{marginLeft: '5rem', fontSize: '15px', backgroundColor: 'darkkhaki'}} onClick={props.addToCart}>ADD TO CART</button>
           </Card.Text>
         </Card.Body>
       </Card>

@@ -10,6 +10,7 @@ import "./App.css";
 import CartProvider from "./store/CartProvider";
 import AboutPage from "./pages/AboutPage";
 import Home from "./pages/Home";
+import StorePage from "./pages/StorePage";
 
 // const routeDefination = createRoutesFromElements(
 //   <Route>
@@ -21,8 +22,10 @@ import Home from "./pages/Home";
 
 const router = createBrowserRouter([
   // {path: '/', element: ''},
-  { path: "/about", element: <AboutPage /> },
-  {path: '/home', element: <Home/>}
+  {path: '/home', element: <Home/>},
+  {path: '/about', element: <AboutPage /> },
+  {path: '/store', element: <StorePage />}
+  
 ]);
 
 const App = () => {

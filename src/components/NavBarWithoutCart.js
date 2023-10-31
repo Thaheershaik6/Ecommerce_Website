@@ -2,6 +2,7 @@ import React from "react";
 
 import { Navbar, Container, Nav } from "react-bootstrap";
 import Header from "./Header/Header";
+import { NavLink } from "react-router-dom";
 
 const NavBarWithoutCart = () => {
   return (
@@ -13,15 +14,15 @@ const NavBarWithoutCart = () => {
       >
         <Container>
           <Nav className="justify-content-center">
-            <Navbar.Brand href="/home" className="px-4">
+            <NavLink to="/home" className="px-4" style={{color: 'white', textDecoration: 'none', fontSize: '25px'}}>
               HOME
-            </Navbar.Brand>
-            <Navbar.Brand href="#store" className="px-4">
+            </NavLink>
+            <NavLink to="/store" className="px-4" style={{color: 'white', textDecoration: 'none', fontSize: '25px'}}>
               STORE
-            </Navbar.Brand>
-            <Navbar.Brand href="/about" className="px-4">
+            </NavLink>
+            <NavLink to="/about" className="px-4" style={{color: 'white', textDecoration: 'none', fontSize: '25px'}}>
               ABOUT
-            </Navbar.Brand>
+            </NavLink>
           </Nav>
         </Container>
       </Navbar>
